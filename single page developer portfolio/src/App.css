@@ -16,6 +16,7 @@
   color: #ffffff;
   font-style: normal;
   padding: 0 10px;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 88px;
@@ -110,6 +111,9 @@ textarea::placeholder {
   flex-direction: column;
   gap: 45px;
   position: relative;
+}
+.Hero-Details > h1 {
+  width: 65%;
 }
 .Hero-Details > h1 > span {
   text-decoration: 6px underline #4ee1a0;
@@ -217,6 +221,10 @@ textarea::placeholder {
   outline: none;
   border-bottom: 1px solid #4ee1a0;
 }
+textarea {
+  resize: none;
+  width: 100%;
+}
 .Contact-info .Form button {
   background-color: #242424;
   align-self: flex-end;
@@ -257,4 +265,111 @@ svg {
 path:hover {
   cursor: pointer;
   fill: #4ee1a0;
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 72px;
+  }
+  #Hero {
+    background-image: url("./assets/images/image-profile-tablet.webp");
+  }
+  .Contact-info {
+    gap: 110px;
+  }
+}
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 56px;
+  }
+  .Skills {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+  .circle {
+    right: -70px;
+    bottom: 0;
+  }
+  .Contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .Contact-info article {
+    text-align: center;
+    gap: 20px;
+  }
+  footer {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.136px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 510px) {
+  #Hero {
+    background-image: url("./assets/images/image-profile-mobile.webp");
+    background-size: auto 350px;
+    background-position: top center;
+    padding: 20px 0;
+    gap: 0;
+    text-align: center;
+  }
+
+  .Navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .Navigation > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .Hero-Details {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    position: relative;
+  }
+  .Hero-Details > h1 {
+    width: 100%;
+  }
+  .Hero-Details > button {
+    align-self: center;
+  }
+  .ring1 {
+    left: -300px;
+    top: -250px;
+    z-index: -1;
+  }
+  .Skills {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+    text-align: center;
+  }
+  .Projects {
+    border-top: 1px solid #ffffff;
+    padding-top: 70px;
+  }
+  .Projects-Gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

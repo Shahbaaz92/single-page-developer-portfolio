@@ -38,7 +38,7 @@ function Header() {
         <img src={ring1} className="ring1" alt="background-patter" />
         <img src={circle} className="circle" alt="background-patter" />
         <h1>
-          Nice to meet you! <br /> I&apos;m <span> Adam Keyes</span>.
+          Nice to meet you! I&apos;m <span> Adam Keyes</span>.
         </h1>
         <p>
           Based in the UK, I&apos;m a front-end developer <br /> passionate
