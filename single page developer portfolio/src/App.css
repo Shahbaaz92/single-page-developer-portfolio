@@ -15,6 +15,7 @@
   font-family: "Space Grotesk", sans-serif;
   color: #ffffff;
   font-style: normal;
+  padding: 0 10px;
 }
 h1 {
   font-size: 88px;
@@ -77,14 +78,86 @@ input::placeholder,
 textarea::placeholder {
   opacity: 0.5;
 }
-#Main {
-  background-color: #4ee1a0;
+#Hero {
+  background: linear-gradient(
+    to right,
+    #151515 0%,
+    #151515 60%,
+    #242424 40%,
+    #242424 100%
+  );
   display: flex;
   flex-direction: column;
-  padding: 72px auto;
+  gap: 125px;
+  text-align: left;
+  margin-bottom: 65px;
+}
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navigation > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.Hero-Details {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.Hero-Details > h1 > span {
+  text-decoration: 6px underline #4ee1a0;
+}
+.Hero-Details > button {
+  align-self: flex-start;
+}
+#Main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 72px 0;
+  gap: 150px;
+  border-top: 1px solid #fff;
+}
+.Skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+.Projects {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.Projects > article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Projects-Gallery {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+.Projects-Gallery {
+  text-transform: uppercase;
+}
+.Projects-Gallery article {
+  margin-bottom: 70px;
+}
+.Projects-Gallery img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 #Contact {
-  background-color: #242424;
+  /* background-color: #242424; */
   padding: 85px 0 45px;
 }
 .Contact-info {
