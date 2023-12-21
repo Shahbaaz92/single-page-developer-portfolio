@@ -9,9 +9,9 @@
   width: 100%;
   max-width: 1110px;
   height: auto;
-  margin: 40px auto;
+  margin: 0 auto;
   text-align: center;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   font-family: "Space Grotesk", sans-serif;
   color: #ffffff;
   font-style: normal;
@@ -48,6 +48,7 @@ p.logo {
   letter-spacing: -0.444px;
 }
 button {
+  cursor: pointer;
   font-family: inherit;
   color: inherit;
   font-size: 16px;
@@ -59,6 +60,10 @@ button {
   text-transform: uppercase;
   border: none;
   border-bottom: 2px solid #4ee1a0;
+}
+button:hover {
+  color: #4ee1a0;
+  transform: scale(0.98);
 }
 input,
 textarea {
@@ -88,6 +93,7 @@ textarea::placeholder {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+  padding-top: 40px;
 }
 .Navigation {
   display: flex;
@@ -103,12 +109,23 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   gap: 45px;
+  position: relative;
 }
 .Hero-Details > h1 > span {
   text-decoration: 6px underline #4ee1a0;
 }
 .Hero-Details > button {
   align-self: flex-start;
+}
+.ring1 {
+  position: absolute;
+  top: -70px;
+  left: -250px;
+}
+.circle {
+  position: absolute;
+  right: 300px;
+  bottom: 20px;
 }
 #Main {
   width: 100%;
@@ -124,6 +141,12 @@ textarea::placeholder {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   text-align: left;
+  position: relative;
+}
+.ring2 {
+  position: absolute;
+  right: -370px;
+  bottom: -50px;
 }
 .Projects {
   display: flex;
@@ -153,6 +176,7 @@ textarea::placeholder {
   width: 100%;
   margin-bottom: 20px;
 }
+
 #Contact {
   /* background-color: #242424; */
   padding: 85px 0 45px;
@@ -162,6 +186,12 @@ textarea::placeholder {
   margin-bottom: 90px;
   width: 100%;
   gap: 220px;
+  position: relative;
+}
+.ring3 {
+  position: absolute;
+  bottom: -70px;
+  left: -250px;
 }
 .Contact-info > * {
   width: 50%;
@@ -172,19 +202,41 @@ textarea::placeholder {
   flex-direction: column;
   gap: 36px;
 }
-.Contact-info form {
+.Contact-info .Form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.Contact-info form input,
-.Contact-info form textarea {
+.Contact-info .Form input,
+.Contact-info .Form textarea {
   padding-left: 24px;
   padding-bottom: 17px;
 }
-.Contact-info form button {
+.Contact-info .Form input:focus,
+.Contact-info .Form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #4ee1a0;
+}
+.Contact-info .Form button {
   background-color: #242424;
   align-self: flex-end;
+}
+
+.invalid {
+  color: #ff6f5b;
+  font-family: Space Grotesk;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.167px;
+  align-self: flex-end;
+  margin-top: -30px;
+}
+.invalid-line {
+  border-bottom: 1px solid #ff6f5b;
+}
+.hidden {
+  display: none;
 }
 footer {
   padding: 45px 0;

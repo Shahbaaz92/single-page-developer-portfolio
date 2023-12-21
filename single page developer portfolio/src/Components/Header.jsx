@@ -1,3 +1,5 @@
+import ring1 from "../assets/images/pattern-rings.svg";
+import circle from "../assets/images/pattern-circle.svg";
 function Header() {
   return (
     <header className="Hero" id="Hero">
@@ -33,6 +35,8 @@ function Header() {
         </div>
       </nav>
       <section className="Hero-Details">
+        <img src={ring1} className="ring1" alt="background-patter" />
+        <img src={circle} className="circle" alt="background-patter" />
         <h1>
           Nice to meet you! <br /> I&apos;m <span> Adam Keyes</span>.
         </h1>

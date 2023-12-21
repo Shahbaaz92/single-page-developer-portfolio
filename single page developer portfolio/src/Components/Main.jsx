@@ -4,11 +4,13 @@ import img3 from "../assets/images/thumbnail-project-3-large.webp";
 import img4 from "../assets/images/thumbnail-project-4-large.webp";
 import img5 from "../assets/images/thumbnail-project-5-large.webp";
 import img6 from "../assets/images/thumbnail-project-6-large.webp";
+import ring2 from "../assets/images/pattern-rings.svg";
 
 function Main() {
   return (
     <main className="Main" id="Main">
       <section className="Skills">
+        <img src={ring2} alt="background-pattern" className="ring2" />
         <article>
           <h2>HTML</h2>
           <p>4 Years Experience</p>

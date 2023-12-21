@@ -1,4 +1,23 @@
+import React from "react";
+import ring3 from "../assets/images/pattern-rings.svg";
 function Contact() {
+  let [emailVal, setEmailVal] = React.useState("");
+  const invalid = document.getElementById("Invalid");
+  const email = document.getElementById("Email");
+
+  function checkValidity() {
+    if (!emailVal.includes("@")) {
+      invalid.classList.remove("hidden");
+      email.classList.add("invalid-line");
+    } else {
+      invalid.classList.add("hidden");
+      email.classList.remove("invalid-line");
+    }
+  }
+  function changeValue(e) {
+    setEmailVal(e.target.value);
+  }
+
   return (
     <div className="Contact" id="Contact">
       <section className="Contact-info">
@@ -9,16 +28,36 @@ function Contact() {
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </article>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
+        <form className="Form">
+          <input
+            type="text"
+            placeholder="Name"
+            name="Name"
+            id="Name"
+            required
+          />
+          <input
+            onChange={changeValue}
+            value={emailVal}
+            type="email"
+            placeholder="Email"
+            name="Email"
+            id="Email"
+            required
+          />
+          <small className="hidden invalid" id="Invalid">
+            Sorry, invalid format here
+          </small>
           <textarea
             name="message"
             id=" message"
             placeholder="Message"
+            required
           ></textarea>
-          <button>Send message</button>
+          <button onClick={checkValidity}>Send message</button>
         </form>
+
+        <img src={ring3} alt="background-pattern" className="ring3" />
       </section>
       <footer>
         <p className="logo">adamkeyes</p>
