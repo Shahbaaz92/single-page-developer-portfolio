@@ -69,15 +69,70 @@ textarea {
   line-height: 26px;
   letter-spacing: -0.222px;
   text-transform: uppercase;
-  background-color: #151515;
+  background-color: #242424;
   border: none;
   border-bottom: 1px solid #fff;
 }
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   opacity: 0.5;
 }
-
+#Main {
+  background-color: #4ee1a0;
+  display: flex;
+  flex-direction: column;
+  padding: 72px auto;
+}
+#Contact {
+  background-color: #242424;
+  padding: 85px 0 45px;
+}
+.Contact-info {
+  display: flex;
+  margin-bottom: 90px;
+  width: 100%;
+  gap: 220px;
+}
+.Contact-info > * {
+  width: 50%;
+  text-align: left;
+}
+.Contact-info article {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.Contact-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Contact-info form input,
+.Contact-info form textarea {
+  padding-left: 24px;
+  padding-bottom: 17px;
+}
+.Contact-info form button {
+  background-color: #242424;
+  align-self: flex-end;
+}
 footer {
   padding: 45px 0;
   border-top: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+svg {
+  cursor: pointer;
+}
+
+path:hover {
+  cursor: pointer;
+  fill: #4ee1a0;
 }

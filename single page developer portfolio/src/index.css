@@ -4,5 +4,10 @@ body {
   place-items: center;
   width: 100%;
   height: auto;
-  background-color: #151515;
+  background: linear-gradient(
+    #151515 0%,
+    #151515 70%,
+    #242424 70%,
+    #242424 100%
+  );
 }
