@@ -79,18 +79,15 @@ textarea::placeholder {
   opacity: 0.5;
 }
 #Hero {
-  background: linear-gradient(
-    to right,
-    #151515 0%,
-    #151515 60%,
-    #242424 40%,
-    #242424 100%
-  );
   display: flex;
   flex-direction: column;
   gap: 125px;
   text-align: left;
   margin-bottom: 65px;
+  background-image: url("./assets/images/image-profile-desktop.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 .Navigation {
   display: flex;
