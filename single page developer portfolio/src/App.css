@@ -175,10 +175,31 @@ textarea::placeholder {
 }
 .Projects-Gallery article {
   margin-bottom: 70px;
+  position: relative;
 }
 .Projects-Gallery img {
+  cursor: pointer;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.remodal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 85%;
+  top: 0;
+}
+.remodal > button {
+  background-color: transparent;
+}
+.modal {
+  display: none;
 }
 
 #Contact {
@@ -277,6 +298,19 @@ path:hover {
   .Contact-info {
     gap: 110px;
   }
+  .Projects-Gallery > article > div {
+  }
+  .modal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    background-color: #151515;
+    position: relative;
+    height: 0;
+    top: 10px;
+  }
 }
 @media screen and (max-width: 750px) {
   h1 {
@@ -318,6 +352,9 @@ path:hover {
   p {
     font-size: 16px;
     line-height: 26px;
+  }
+  .Projects-Gallery {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (max-width: 510px) {
@@ -368,8 +405,5 @@ path:hover {
   .Projects {
     border-top: 1px solid #ffffff;
     padding-top: 70px;
-  }
-  .Projects-Gallery {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
